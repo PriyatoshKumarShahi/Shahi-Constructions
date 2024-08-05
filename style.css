@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(8, 12, 30);
+
+}
