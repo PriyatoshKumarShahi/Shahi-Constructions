@@ -37,21 +37,53 @@ nav{
 }
 .navbar{
     display: flex;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-size: 20px;
     width: 40vw;
-   justify-content: space-evenly;
+   justify-content: center;
+   align-items: center;
+   gap: 25px;
+
 }
 .navbar li{
     list-style: none;
 }
-.navbar li a{
+/* .navbar li a{
     text-decoration: none;
     color: white;
-}
-.navbar li a:hover{
+} */
+/* .navbar li a:hover{
     opacity: 0.6;
-}
+}  */
+li a {
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -0.3rem;
+      left: 0;
+      width: 0%;
+      border-bottom: 0.1rem solid rgb(224, 57, 224);
+      transition: all 0.3s linear;
+    }
+  }
+  & li a:hover {
+    color:rgb(224, 57, 224);
+  }
+
+  & li a:hover:after {
+    width: 100%;
+  }
+
+
 #home-img{
     height: 110vh;
     width: 1519px;
@@ -370,6 +402,18 @@ color: white;
     text-decoration: none;
     color: rgb(88, 53, 160);
 }
+.insta a{
+    text-decoration: none;
+    color: white;
+}
+.whatsapp a{
+    text-decoration: none;
+    color: white;
+}
+.facebook a{
+    text-decoration: none;
+    color: white;
+}
 .insta i{
     text-decoration: none;
     color: rgb(88, 53, 160);
@@ -393,7 +437,7 @@ color: pink;
     height: 370px;
     background-color: black;
     color: white;
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     
     }
     .box16{
@@ -453,4 +497,9 @@ color: pink;
         width: 80vw;
         background-color: white;
         margin: auto;
+    }
+    .nav-top{
+        display: flex;
+        justify-content: space-around;
+        height: 80px;
     }
