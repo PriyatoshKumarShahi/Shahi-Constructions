@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 10}px)`; // Your modified width
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth }px)`; // Your modified width
         updateDots();
     }, 5000);
 
