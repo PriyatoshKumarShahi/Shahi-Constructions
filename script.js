@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".testimonial-card");
     const totalCards = cards.length;
     const visibleCards = 3; // Adjust based on screen width
-    const cardWidth = cards[0].offsetWidth + 40; // Including gap
+    const cardWidth = cards[0].offsetWidth + 70; // Including gap
 
     // Create Dots
     for (let i = 0; i < totalCards - (visibleCards - 1); i++) {
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth+40}px)`;
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth+60}px)`;
         updateDots();
     }, 5000);
 });
