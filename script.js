@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".testimonial-card");
     const totalCards = cards.length;
     const visibleCards = 3; // Adjust based on screen width
-    const cardWidth = cards[0].offsetWidth + 70; // Including gap
+    const cardWidth = cards[0].offsetWidth + 70; // Keeping your modified width
 
-    // Create Dots
+    // Create Dots dynamically based on the number of slides
     for (let i = 0; i < totalCards - (visibleCards - 1); i++) {
         const dot = document.createElement("span");
         dot.classList.add("dot");
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nextBtn.addEventListener("click", () => {
         if (currentIndex < totalCards - visibleCards) {
             currentIndex++;
-            wrapper.style.transform = `translateX(-${currentIndex * cardWidth+40}px)`;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 40}px)`; // Your modified width
             updateDots();
         }
     });
@@ -105,21 +105,31 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
             currentIndex--;
-            wrapper.style.transform = `translateX(-${currentIndex * cardWidth-50}px)`;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth - 50}px)`; // Your modified width
             updateDots();
         }
     });
 
-    // Auto-slide every 5s
+    // Auto-slide every 5s (keeping your modified sliding width)
     setInterval(() => {
         if (currentIndex < totalCards - visibleCards) {
             currentIndex++;
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth+60}px)`;
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 60}px)`; // Your modified width
         updateDots();
     }, 5000);
+
+    // Click on dots to move to respective slide (Keeping Your Width Modifications)
+    document.querySelectorAll(".dot").forEach(dot => {
+        dot.addEventListener("click", (e) => {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            currentIndex = index;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 60}px)`; // Your modified width
+            updateDots();
+        });
+    });
 });
 
 
