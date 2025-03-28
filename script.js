@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (newIndex >= totalCards) newIndex = 0;
         
         index = newIndex;
-        wrapper.style.transform = `translateX(-${index * 333}px)`;
+        wrapper.style.transform = `translateX(-${index * 340}px)`;
         updateDots();
     }
 
