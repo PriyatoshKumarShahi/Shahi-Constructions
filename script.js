@@ -70,43 +70,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.querySelector(".testimonial-wrapper");
-    const dotsContainer = document.querySelector(".testimonial-dots");
-    const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const dotsContainer = document.querySelector(".testimonial-dots");
 
-    let index = 0;
+    let currentIndex = 0;
     const cards = document.querySelectorAll(".testimonial-card");
     const totalCards = cards.length;
+    const visibleCards = 3; // Adjust based on screen width
+    const cardWidth = cards[0].offsetWidth + 40; // Including gap
 
     // Create Dots
-    for (let i = 0; i < totalCards; i++) {
+    for (let i = 0; i < totalCards - (visibleCards - 1); i++) {
         const dot = document.createElement("span");
-        dot.addEventListener("click", () => moveToSlide(i));
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.setAttribute("data-index", i);
         dotsContainer.appendChild(dot);
     }
 
-    const dots = document.querySelectorAll(".testimonial-dots span");
-    dots[0].classList.add("active");
+    const updateDots = () => {
+        document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+        document.querySelector(`.dot[data-index="${currentIndex}"]`).classList.add("active");
+    };
 
-    function moveToSlide(newIndex) {
-        if (newIndex < 0) newIndex = totalCards - 1;
-        if (newIndex >= totalCards) newIndex = 0;
-        
-        index = newIndex;
-        wrapper.style.transform = `translateX(-${index * 340}px)`;
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < totalCards - visibleCards) {
+            currentIndex++;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth+40}px)`;
+            updateDots();
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            updateDots();
+        }
+    });
+
+    // Auto-slide every 5s
+    setInterval(() => {
+        if (currentIndex < totalCards - visibleCards) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         updateDots();
-    }
-
-    function updateDots() {
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-    }
-
-    nextBtn.addEventListener("click", () => moveToSlide(index + 1));
-    prevBtn.addEventListener("click", () => moveToSlide(index - 1));
-
-    setInterval(() => moveToSlide(index + 1), 6000); // Slower auto-scroll
+    }, 5000);
 });
+
 
 
 
