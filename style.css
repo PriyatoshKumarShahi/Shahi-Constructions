@@ -1022,129 +1022,117 @@ color: white;
     background-color: rgb(88, 53, 160);
     color: white;
 }
-.copyright{
+.copyright {
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-  background-color: black;
-  color: white;
-}
-.icons{
-    display: flex;
-    margin-top: 20px;
-    font-size: 30px;
-    
-}
-.icons i{
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.facebook i{
-    margin-left: -10px;
-    text-decoration: none;
-    color: rgb(88, 53, 160);
-}
-.insta a{
-    text-decoration: none;
-    color: white;
-}
-.whatsapp a{
-    text-decoration: none;
-    color: white;
-}
-.facebook a{
-    text-decoration: none;
-    color: white;
-}
-.insta i{
-    text-decoration: none;
-    color: rgb(88, 53, 160);
-}
-.linkdin i{
-    text-decoration: none;
-    color: rgb(88, 53, 160);
-}
-.facebook i:hover{
-    color: rgb(57, 9, 181);
-}
-.insta i:hover{
-color: pink;
-}
-.linkdin i:hover{
-    color: rgb(7, 7, 127);
-}
-.container5{
-    display: flex;
-    justify-content: space-evenly;
-    height: 370px;
     background-color: black;
     color: white;
-    /* border-bottom: 2px solid white; */
-    
-    }
-    .box16{
-        display: block;
-        width: 200px;
-        margin-top: 25px;
-    }
-    .about{
-        color: rgba(188, 188, 32, 0.729);
-    }
-    .about1{
-        margin-top: 15px;
-    }
-    .box17{
-        display: block;
-        width: 200px;
-        margin-top: 25px;
-    }
-    .add{
-        color: rgba(188, 188, 32, 0.729);
-    }
-    .add1{
-        margin-top: 15px;
-    }
-    .box18{
-        display: block;
-        width: 300px;
-        margin-top: 25px;
-        margin-left: 20px;
-    }
-    .follow{
-        color: rgba(188, 188, 32, 0.729);
-    }
-    .insta i{
-        font-size: 20px;
-        color: pink;
-        margin-top: 15px;
-        margin-right: 2px;
-    }
-    .whatsapp i{
-        font-size: 20px;
-        color: rgb(46, 219, 7);
-        margin-right: 4px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
 
-        
-    }
-    .whatsapp{
-        margin-top: 10px;
-    }
-    .facebook i{
-        font-size: 19px;
-        color: rgb(56, 94, 179);
-        margin-right: 5px;
+/* Footer Container */
+.container5 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
 
+/* Individual Box Styling */
+.box16, .box17, .box18 {
+    flex: 1;
+    min-width: 250px; /* Ensures proper stacking on smaller screens */
+    max-width: 350px;
+    margin: 10px;
+}
+
+/* Headings */
+.about, .add, .follow {
+    color: rgba(188, 188, 32, 0.729);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* About Us */
+.about1 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Address Section */
+.box17 iframe {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Social Media Links */
+.box18 a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.insta a:hover { color: pink; }
+.whatsapp a:hover { color: #25D366; } /* WhatsApp Green */
+.facebook a:hover { color: #1877F2; } /* Facebook Blue */
+
+/* Icons */
+.box18 i {
+    font-size: 20px;
+}
+
+.insta , .whatsapp , .facebook{
+    margin-left: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container5 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .facebook{
-        margin-top: 10px;
-        margin-left: 10px;
+
+    .box16, .box17, .box18 {
+        max-width: 100%;
+        text-align: center;
     }
-    .seperation2{
-        height: 1px;
-        width: 99vw;
-        background-color: rgb(107, 107, 107);
-        margin: auto;
+
+    .box17 iframe {
+        width: 90%;
+        height: 200px;
     }
-    
+    .insta , .whatsapp , .facebook{
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box17 iframe {
+        width: 100%;
+        height: 180px;
+    }
+    .insta , .whatsapp , .facebook{
+        margin-left: 60px;
+    }
+    .copyright {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
