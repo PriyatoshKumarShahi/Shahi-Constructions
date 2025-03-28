@@ -636,6 +636,7 @@ body {
         height: 200px;
         margin: auto;
         padding: 15px;
+        border-radius: 10px;
     }
 
     .testimonial-content {
