@@ -133,6 +133,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.querySelector(".read-more-btn").addEventListener("click", () => {
+    const aboutSection = document.querySelector(".secondSection");
+    
+    // Expand About Section (Push Down Instead of Overlapping)
+    aboutSection.classList.add("expanded");
+    
+    // Scroll to ensure expanded content is visible
+    // setTimeout(() => {
+    //     aboutSection.scrollIntoView({ behavior: "smooth" });
+    // }, 300);
+});
+
+document.querySelector(".back-btn").addEventListener("click", () => {
+    const aboutSection = document.querySelector(".secondSection");
+    
+    // Collapse About Section
+    aboutSection.classList.remove("expanded");
+
+    // Scroll back to the top of About Section
+    setTimeout(() => {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+});
 
 
 
