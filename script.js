@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 20}px)`; // Your modified width
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 10}px)`; // Your modified width
         updateDots();
     }, 5000);
 
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.addEventListener("click", (e) => {
             const index = parseInt(e.target.getAttribute("data-index"));
             currentIndex = index;
-            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 40}px)`; // Your modified width
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 20}px)`; // Your modified width
             updateDots();
         });
     });
