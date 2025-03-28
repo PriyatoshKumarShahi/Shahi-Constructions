@@ -13,11 +13,150 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
-   
+    <nav class="navbar">
+      <div class="container">
+          <a href="#" class="logo">Shahi Construction</a>
+          <button id="menu-btn" class="menu-btn">☰</button>
+          <ul id="menu" class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#project">Our Projects</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="top-left-line"></div>
+  <div class="bottom-right-line"></div>
+
+  <section class="firstSection">
+      <div class="overlay"></div>
+      <h1 class="section-title">We’re building projects that establish new standards of <span style="color: orange;">innovation and technology!</span></h1>
     
-    <section class="fifthSection"data-aos="fade-up" >
+      <a href="#projects" class="cta-button">See What We Have Built</a>
+  </section>
+
+
+  <section class="secondSection about-section" id="about">
+    <div class="secondSection-heading">
+        <h2 id="about-heading" class="about-title">ABOUT US</h2>
+      </div>
+      <h3 class="story-title">OUR <span style="color: orange;">STORY</span></h3>
+      <div class="seperation"></div>
+</section>
+
+
+
+<section class="thirdSection" id="project">
+  <div class="thirdSection-heading">
+    <h2 data-aos="fade-left" id="project-heading" class="project-title">OUR PROJECTS</h2>
+  </div>
+  <div class="seperation1"></div>
+</section>
+
+
+
+
+<section class="testimonial-section">
+  <div class="testimonial-heading" data-aos="fade-right">
+      <h2>TESTIMONIALS</h2>
+  </div>
+
+  <h2 class="testimonial-title">What Our Clients Say</h2>
+
+  <div class="testimonial-slider">
+      <button class="prev-btn">&#10094;</button>
+      <div class="testimonial-wrapper">
+          <div class="testimonial-card">
+              <p>"Shahi Constructions built our dream home with perfection! The process was smooth, and they exceeded expectations."</p>
+              <h4>- Rajesh Kumar</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"High-quality materials and timely delivery. Their professionalism ensured a flawless construction process."</p>
+              <h4>- Priya Sharma</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"Amazing attention to detail! Our house turned out better than we imagined. Truly exceptional craftsmanship."</p>
+              <h4>- Anil Mehta</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"A professional team with great customer service. They listened to our needs and delivered exactly what we wanted."</p>
+              <h4>- Sunita Verma</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"They turned our vision into reality. The project was well-managed, and we were kept informed at every step."</p>
+              <h4>- Vikram Singh</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"Excellent workmanship and commitment to quality. We are beyond satisfied with our new home!"</p>
+              <h4>- Deepak Chawla</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"The best construction company we've worked with. Their dedication to excellence is evident in every aspect."</p>
+              <h4>- Neha Rathi</h4>
+          </div>
+          <div class="testimonial-card">
+              <p>"Affordable pricing with top-notch quality! Highly recommend Shahi Constructions for building dream homes."</p>
+              <h4>- Arjun Malhotra</h4>
+          </div>
+      </div>
+      <button class="next-btn">&#10095;</button>
+  </div>
+
+  <div class="testimonial-dots"></div>
+</section>
+
+
+
+
+
+<section class="fourthSection" id="numbers">
+  <div class="fourthSection-heading">
+      <h2  class="numbers-title">OUR NUMBERS</h2>
+  </div>
+
+  <div class="stats-container">
+      <div class="stat-box">
+          <h3 class="counter" data-target="200">0</h3>
+          <p>Happy Customers</p>
+      </div>
+      <div class="stat-box">
+          <h3 class="counter" data-target="50">0</h3>
+          <p>Projects Built</p>
+      </div>
+      <div class="stat-box">
+          <h3 class="counter" data-target="3">0</h3>
+          <p>Ongoing Projects</p>
+      </div>
+      <div class="stat-box">
+          <h3 class="counter" data-target="8">+</h3>
+          <p>Years of Experience</p>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    
+    
+    <section class="fifthSection ceo"data-aos="fade-up" >
       <div class="box6">
         <h1>Pramod Kumar Shahi</h1>
         <h4>Founder & CEO, Shahi Constructions</h4>
@@ -28,7 +167,7 @@
         </p>
       </div>
       <div class="box7">
-        <img src="ceo-img.jpg" alt="" />
+        <img src="/assets/ceo-img.jpg" alt="" />
       </div>
     </section>
     <div class="panel"data-aos="fade-up" >
@@ -38,7 +177,7 @@
       </div>
       <div class="container3">
         <div class="box9">
-          <pre>                     <i class="fa-solid fa-thumbs-up"></i>
+          <pre> <i class="fa-solid fa-thumbs-up"></i>
 
             <h4> Satisfaction Gaurantee</h4>
 <p>        We balance style and hospitality 
@@ -68,16 +207,16 @@ a beautiful house near our home town </p>
 
       <div class="container4a">
         <div class="box12">
-          <p><b>3+</b></p>
+          <p><b>4+</b></p>
           <h5>Years of Experience</h5>
         </div>
         <div class="box13">
-          <p><b>30+</b></p>
+          <p><b>40+</b></p>
           <h5>Projects</h5>
         </div>
       </div>
     </div>
-    <section class="sixthSection" id="contact">
+    <section class="sixthSection  " id="contact">
       <div class="box14">
           <h1>CONTACT US</h1>
           <div class="contact">
@@ -164,7 +303,7 @@ a beautiful house near our home town </p>
   </div>
   <div class="copyright">
     <p>Copyright &copy; 2024 | All rights reserved | Made with <i style="color: red;" class="fa-solid fa-heart"></i> by Priyatosh Kumar</p>
-</div>
+</div>  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
