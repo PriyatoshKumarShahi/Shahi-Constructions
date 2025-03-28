@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
             currentIndex--;
-            wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth-30}px)`;
             updateDots();
         }
     });
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth+40}px)`;
         updateDots();
     }, 5000);
 });
