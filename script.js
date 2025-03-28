@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nextBtn.addEventListener("click", () => {
         if (currentIndex < totalCards - visibleCards) {
             currentIndex++;
-            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 30}px)`; // Your modified width
+            wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 20}px)`; // Your modified width
             updateDots();
         }
     });
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             currentIndex = 0;
         }
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 30}px)`; // Your modified width
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth + 20}px)`; // Your modified width
         updateDots();
     }, 5000);
 
