@@ -430,6 +430,32 @@ body {
 .read-more-btn:hover{
 color: black;
 }
+@media (max-width:768px){
+    .about-content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .secondSection{
+        padding: 50px 20px;
+        min-height: 550vh;
+    }
+    .about-text{
+        font-size: 1.2rem;
+
+    }
+    .about-text-container{
+        min-width: 100%;
+        margin-left: 190px;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .about-images{
+        align-items: center;
+        /* margin-left: -80px; */
+    }
+}
 
 
 /* Expanded Section (Pushed Below) */
